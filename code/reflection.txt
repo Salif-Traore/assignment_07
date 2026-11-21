@@ -1,8 +1,1 @@
-Write your reflection here.
-
-See reflection.md for what makes a good reflection — be specific, use the
-terminology from this assignment (HTML element, CSS selector, class and id
-selectors, sibling selector, inner_text, attribute, headless browser, waiting for
-JavaScript, crawling, pagination, read_html, melt, fuzzy matching, normalization,
-threshold, human in the loop, merge indicator, gap analysis), and make it
-actionable.
+The main thing I learned in this assignment is that each of the three cafés needed a different scraping technique: Lakeshore's HTML elements could be reached with CSS class selectors and the ~ sibling selector to pair each heading with its grid and calling inner_text() on each card, Hilltop's tables were easiest with pd.read_html and melt to turn size columns into rows, and Canal Street needed a headless browser that selected a shop, clicked Show more while waiting for JavaScript, then crawled each href. The part that most changed how I think was fuzzy matching: Matcha Latte scores 87 against Mocha Latte while PSL scores 0 against Pumpkin Spice Latte, so a threshold alone cannot decide, which is why the design is human in the loop, with normalization and rapidfuzz proposing matches and the owner's saved decisions winning. I struggled most with gap_analysis, where sorting by the _merge indicator column from an outer merge silently put the wrong rows first because it is a categorical, and I only caught it when the test showed 'only us' ahead of 'only them'; converting it to strings before mapping fixed it. Next I want to practice reading the order and dtype of intermediate DataFrames with .dtypes and .head() before sorting or merging, and rebuild the Canal Street scraper without the docstring hints so I can handle explicit waits on my own.
