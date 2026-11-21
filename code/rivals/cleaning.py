@@ -1,13 +1,4 @@
-"""
-cleaning.py - Part 1, Step 1: turn scraped text into clean values.
-
-A scraper hands you whatever the page shows a person, and pages are written for
-people. These functions turn raw menu-card text into rows a DataFrame can hold.
-They are plain Python - no browser - so they are quick to test and quick to fix.
-
-Every café names its drink sizes S, M and L (Lakeshore pours only S and L); food
-has one price, which we call "Each".
-"""
+"""cleaning.py - Part 1, Step 1: turn scraped text into clean values."""
 
 import re
 
