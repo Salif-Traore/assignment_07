@@ -100,7 +100,7 @@ def match_items(menus: pd.DataFrame, decisions: pd.DataFrame) -> pd.DataFrame:
 
 def record_decision(decisions: pd.DataFrame, cafe: str, item: str,
                     matched_to: str) -> pd.DataFrame:
-    """`decisions` with the owner's answer for (cafe, item), replacing any earlier one."""
+    """`decisions` with the owner's answer for (cafe, item)."""
     new_row = pd.DataFrame(
         [{"cafe": cafe, "item": item, "matched_to": matched_to}],
         columns=DECISION_COLUMNS,
